@@ -1,6 +1,7 @@
 package com;
 
 import java.io.File;
+import java.util.Arrays;
 
 public class FileOperation {
 
@@ -17,8 +18,9 @@ public class FileOperation {
 	ff.exists();
 	ff.delete();
 	ff.createNewFile();
-	
-	
+	String listOfFiles[]			=		ff.list();
+
+	Arrays.sort(listOfFiles);
 	}
 
 }

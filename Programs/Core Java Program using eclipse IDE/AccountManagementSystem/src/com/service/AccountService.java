@@ -12,6 +12,7 @@ public class AccountService {
 		
 			public String createAccount(Account account) {
 				int flag=0;
+				
 				if(listOfAccount.size()==0) {
 				listOfAccount.add(account);
 				return "Account created";
