@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class LoginController
  */
+//@WebServlet
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -33,6 +35,7 @@ public class LoginController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter pw = response.getWriter();
 		response.setContentType("text/html");
+							
 		String emailid = request.getParameter("emailid");
 		String password = request.getParameter("password");
 		RequestDispatcher rd1 = request.getRequestDispatcher("Home");
@@ -46,7 +49,8 @@ public class LoginController extends HttpServlet {
 			ResultSet rs  = pstmt.executeQuery();
 			if(rs.next()) {
 				pw.println("successfully login");
-				rd1.forward(request, response);          // we can see only output of target page 
+				//rd1.forward(request, response);          // we can see only output of target page 
+				response.sendRedirect("Home");
 			}else {
 				pw.println("failure try once again");
 				rd2.include(request, response);    
