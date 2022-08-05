@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LoginController
@@ -40,6 +41,7 @@ public class LoginController extends HttpServlet {
 		String password = request.getParameter("password");
 		RequestDispatcher rd1 = request.getRequestDispatcher("Home");
 		RequestDispatcher rd2 = request.getRequestDispatcher("index.html");
+		HttpSession hs = request.getSession();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javatraining", "root", "root@123");
@@ -49,7 +51,10 @@ public class LoginController extends HttpServlet {
 			ResultSet rs  = pstmt.executeQuery();
 			if(rs.next()) {
 				pw.println("successfully login");
+				//request.setAttribute("obj", emailid);				// we store emailid in request scope.
+				hs.setAttribute("obj", emailid);
 				//rd1.forward(request, response);          // we can see only output of target page 
+				//hs.invalidate();
 				response.sendRedirect("Home");
 			}else {
 				pw.println("failure try once again");

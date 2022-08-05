@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Home
@@ -29,7 +30,10 @@ public class Home extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter pw  = response.getWriter();
-		pw.println("Welcome to Home Page");
+		HttpSession hs = request.getSession(true);
+		//String emailid = (String)request.getAttribute("obj");
+		String emailid = (String)hs.getAttribute("obj");
+		pw.println("Welcome to Home Page"+emailid+" session id "+hs.getId());
 	}
 
 	/**
