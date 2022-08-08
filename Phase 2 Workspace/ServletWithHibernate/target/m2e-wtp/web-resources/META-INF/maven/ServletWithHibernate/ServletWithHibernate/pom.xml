@@ -20,6 +20,7 @@
     </plugins>
   </build>
   
+  
   <dependencies>
   <dependency>
     <groupId>mysql</groupId>
@@ -32,4 +33,5 @@
     <version>5.5.6.Final</version>
 </dependency>
   </dependencies>
+  
 </project>

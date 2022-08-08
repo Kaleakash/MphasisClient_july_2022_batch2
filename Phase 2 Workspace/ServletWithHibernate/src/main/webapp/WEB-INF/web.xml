@@ -9,4 +9,14 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ProductStoreController</display-name>
+    <servlet-name>ProductStoreController</servlet-name>
+    <servlet-class>com.controller.ProductStoreController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductStoreController</servlet-name>
+    <url-pattern>/ProductStoreController</url-pattern>
+  </servlet-mapping>
 </web-app>
