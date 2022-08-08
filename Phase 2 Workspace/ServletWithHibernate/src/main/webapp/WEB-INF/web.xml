@@ -19,4 +19,44 @@
     <servlet-name>ProductStoreController</servlet-name>
     <url-pattern>/ProductStoreController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductDeleteController</display-name>
+    <servlet-name>ProductDeleteController</servlet-name>
+    <servlet-class>com.controller.ProductDeleteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductDeleteController</servlet-name>
+    <url-pattern>/ProductDeleteController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductUpdateController</display-name>
+    <servlet-name>ProductUpdateController</servlet-name>
+    <servlet-class>com.controller.ProductUpdateController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductUpdateController</servlet-name>
+    <url-pattern>/ProductUpdateController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindProductController</display-name>
+    <servlet-name>FindProductController</servlet-name>
+    <servlet-class>com.controller.FindProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindProductController</servlet-name>
+    <url-pattern>/FindProductController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetreiveProductDetails</display-name>
+    <servlet-name>RetreiveProductDetails</servlet-name>
+    <servlet-class>com.controller.RetreiveProductDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetreiveProductDetails</servlet-name>
+    <url-pattern>/RetreiveProductDetails</url-pattern>
+  </servlet-mapping>
 </web-app>

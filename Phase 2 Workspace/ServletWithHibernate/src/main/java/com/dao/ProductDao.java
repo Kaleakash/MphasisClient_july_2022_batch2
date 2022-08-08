@@ -1,5 +1,10 @@
 package com.dao;
 
+import java.util.List;
+
+import javax.persistence.TypedQuery;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -80,4 +85,19 @@ public class ProductDao {
 		return pp;
 	}	
 	
+	
+	public List<Product> findAllProduct() {
+		Configuration con = new Configuration();
+		con.configure("hibernate.cfg.xml");
+		SessionFactory sf = con.buildSessionFactory();
+		Session session = sf.openSession();
+		TypedQuery qry	= session.createQuery("select p from Product p");
+		List<Product> listOfProduct = qry.getResultList();
+		return listOfProduct;
+	}
+	
+	
 }
+
+
+
