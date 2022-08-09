@@ -39,7 +39,10 @@ public class ProductDao {
 				SessionFactory sf = con.buildSessionFactory();
 				Session session = sf.openSession();
 				Transaction tran = session.getTransaction();
+				// select * from product where pid = 100;
+				
 				Product pp	= session.get(Product.class, pid);
+				
 				if(pp==null) {
 					return 0;
 				}else {
@@ -96,7 +99,55 @@ public class ProductDao {
 		return listOfProduct;
 	}
 	
+	public List<Product> findAllProductUsingPrice(float price) {
+		Configuration con = new Configuration();
+		con.configure("hibernate.cfg.xml");
+		SessionFactory sf = con.buildSessionFactory();
+		Session session = sf.openSession();
+		// static where clause 
+		//TypedQuery qry	= session.createQuery("select p from Product p where p.price > 5000");
+		// dynamic value using label query 
+		TypedQuery qry	= session.createQuery("select p from Product p where p.price > :myPrice");
+		qry.setParameter("myPrice", price);
+		List<Product> listOfProduct = qry.getResultList();
+		return listOfProduct;
+	}
+	// this method retreive only name 
+	public List<String> retrieveOnlyProductName() {
+		Configuration con = new Configuration();
+		con.configure("hibernate.cfg.xml");
+		SessionFactory sf = con.buildSessionFactory();
+		Session session = sf.openSession();
+		// static where clause 
+		TypedQuery qry	= session.createQuery("select p.pname from Product p");
+		List<String> listOfProduct = qry.getResultList();
+		return listOfProduct;
+	}
+	// this method retreive only price 
+	public List<Float> retrieveOnlyProductPrice() {
+		Configuration con = new Configuration();
+		con.configure("hibernate.cfg.xml");
+		SessionFactory sf = con.buildSessionFactory();
+		Session session = sf.openSession();
+		// static where clause 
+		TypedQuery qry	= session.createQuery("select p.price from Product p");
+		List<Float> listOfProduct = qry.getResultList();
+		return listOfProduct;
+	}
 	
+	// this method retreive partial object  
+		public List<Object[]> retrieveProductNameAndPrice() {
+			Configuration con = new Configuration();
+			con.configure("hibernate.cfg.xml");
+			SessionFactory sf = con.buildSessionFactory();
+			Session session = sf.openSession();
+			// static where clause 
+			TypedQuery qry	= session.createQuery("select p.pname,p.price from Product p");
+			List<Object[]> listOfProduct = qry.getResultList();
+			return listOfProduct;
+		}
+		
+		
 }
 
 

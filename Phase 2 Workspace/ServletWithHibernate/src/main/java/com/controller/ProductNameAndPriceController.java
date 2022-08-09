@@ -9,21 +9,20 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.bean.Product;
 import com.service.ProductService;
 
 /**
- * Servlet implementation class RetreiveProductDetails
+ * Servlet implementation class ProductNameAndPriceController
  */
-public class RetreiveProductDetails extends HttpServlet {
+public class ProductNameAndPriceController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RetreiveProductDetails() {
+    public ProductNameAndPriceController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,20 +37,16 @@ public class RetreiveProductDetails extends HttpServlet {
 		response.setContentType("text/html");
 		ProductService ps = new ProductService();
 		
-		List<Product> listOfProduct = ps.findAllProduct();
-		HttpSession hs  = request.getSession();
-		
-						hs.setAttribute("obj", listOfProduct);
-		
+		List<Object[]> listOfProduct = ps.getProductNameAndPrice();
 		pw.println("<h2>All product Details</h2>");
 		pw.println("<table border=1>");
 		
-		pw.println("<tr> <th>PId</th>  <th>PName</th>  <th>Price</th>  </tr>");
+		pw.println("<tr> <th>PName</th>  <th>Price</th>  </tr>");
 		
-		Iterator<Product> li = listOfProduct.iterator();
+		Iterator<Object[]> li = listOfProduct.iterator();
 		while(li.hasNext()) {
-			Product p = li.next();
-			pw.println("<tr><td>"+p.getPid()+"</td><td>"+p.getPname()+"</td><td>"+p.getPrice()+"</td></tr>");
+			Object obj[] = li.next();
+			pw.println("<tr><td>"+obj[0]+"</td><td>"+obj[1]+"</td></tr>");
 		}
 		
 		pw.println("</table>");

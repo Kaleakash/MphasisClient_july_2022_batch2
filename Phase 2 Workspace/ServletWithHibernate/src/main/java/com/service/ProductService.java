@@ -61,4 +61,13 @@ public class ProductService {
 		
 		return listOfProdut;
 	}
+	
+	
+	public List<Object[]> getProductNameAndPrice() {
+		return pd.retrieveProductNameAndPrice();
+	}
+	
+	
+	
+	
 }
