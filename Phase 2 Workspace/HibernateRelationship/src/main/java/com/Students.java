@@ -48,6 +48,10 @@ public Integer getTsid() {
 public void setTsid(Integer tsid) {
 	this.tsid = tsid;
 }
+@Override
+public String toString() {
+	return "Students [sid=" + sid + ", sname=" + sname + ", age=" + age + ", tsid=" + tsid + ", csid=" + csid + "]";
+}
 
 
 }
