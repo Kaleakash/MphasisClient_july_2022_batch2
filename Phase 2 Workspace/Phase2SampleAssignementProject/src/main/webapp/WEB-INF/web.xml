@@ -19,4 +19,24 @@
     <servlet-name>LoginController</servlet-name>
     <url-pattern>/LoginController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TrainerController</display-name>
+    <servlet-name>TrainerController</servlet-name>
+    <servlet-class>com.controller.TrainerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TrainerController</servlet-name>
+    <url-pattern>/TrainerController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentController</display-name>
+    <servlet-name>StudentController</servlet-name>
+    <servlet-class>com.controller.StudentController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentController</servlet-name>
+    <url-pattern>/StudentController</url-pattern>
+  </servlet-mapping>
 </web-app>
