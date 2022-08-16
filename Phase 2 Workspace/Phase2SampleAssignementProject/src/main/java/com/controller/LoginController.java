@@ -45,13 +45,16 @@ public class LoginController extends HttpServlet {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
 		response.setContentType("text/html");
+		
 		Login ll = new Login();
 		ll.setEmail(email);
 		ll.setPassword(password);
+		
 		HttpSession hs = request.getSession();
 		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
 		
 		LoginService ls = new LoginService();
+
 		String result  = ls.checkLoginDails(ll);
 		
 		if(result.equals("success")) {
