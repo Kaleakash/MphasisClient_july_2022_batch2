@@ -3,5 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
+<bean class="com.Employee" id="emp1" scope="singleton"></bean>
+
+<bean class="com.Employee" id="emp2" scope="prototype"></bean>
+
+<bean class="com.Employee" id="emp3">
+	<constructor-arg value="1"></constructor-arg>
+	<constructor-arg value="Ravi"></constructor-arg>
+	<constructor-arg value="12000"></constructor-arg>
+</bean>
 
 </beans>
