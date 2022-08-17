@@ -1,10 +1,13 @@
 package com;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component								//<bean class="com.Address"></bean>
 public class Address {					// by default id is class name in camel naming rules 
+@Value(value = "Bangalore")
 private String city;					// id ie address
+@Value(value = "kar")
 private String state;
 public String getCity() {
 	return city;
