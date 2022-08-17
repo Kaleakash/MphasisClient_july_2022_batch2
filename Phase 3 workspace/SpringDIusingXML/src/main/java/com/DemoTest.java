@@ -26,11 +26,23 @@ public class DemoTest {
 //		Employee employee4 = (Employee)bb.getBean("emp2");		// type casting 
 //		employee4.display();
 		
-		Employee employee5 = (Employee)bb.getBean("emp1");
-		System.out.println(employee5);                    // it will call toString method 
+//		Employee employee5 = (Employee)bb.getBean("emp1");
+//		System.out.println(employee5);                    // it will call toString method 
+//		
+//		Employee employee6 = (Employee)bb.getBean("emp3");		// DI using parameterized constructor
+//		System.out.println(employee6);		
 		
-		Employee employee6 = (Employee)bb.getBean("emp3");		// DI using parameterized constructor
-		System.out.println(employee6);						       
+//		Employee employee7 = (Employee)bb.getBean("emp6");   // pulling through setter base 
+//		System.out.println(employee7);
+		
+//		Address address1 = (Address)bb.getBean("add1");
+//		System.out.println(address1);
+//		
+//		Employee employee8 = (Employee)bb.getBean("emp7");
+//		System.out.println(employee8);
+		
+		Employee employee9 = (Employee)bb.getBean("emp8");
+		System.out.println(employee9);
 		
 	}
 
