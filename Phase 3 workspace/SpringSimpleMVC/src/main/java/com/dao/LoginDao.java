@@ -8,7 +8,7 @@ import com.bean.Login;
 public class LoginDao {
 	public int signIn(Login login) {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/javatraining","root" , "root@123");
 		PreparedStatement pstmt = con.prepareStatement("select * from login where email = ? and password = ?");
 		pstmt.setString(1, login.getEmail());
