@@ -22,6 +22,8 @@ public class LoginService {
 		}
 	}
 	
+	
+	
 	public String signUp(Login login) {
 		if(loginDao.signUp(login)>0) {
 			return "Account created successfully";
