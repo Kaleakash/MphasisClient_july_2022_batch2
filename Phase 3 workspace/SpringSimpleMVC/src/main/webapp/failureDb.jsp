@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="hello">Click Here</a> |
-<a href="hi">Click Here</a> |
-<a href="login.jsp">Login Page</a> | 
-<a href="loginDb.jsp">Login Page with DB</a>
+<h2>Failure try once again from Db</h2>
+<%@include file="loginDb.jsp" %>
 </body>
 </html>

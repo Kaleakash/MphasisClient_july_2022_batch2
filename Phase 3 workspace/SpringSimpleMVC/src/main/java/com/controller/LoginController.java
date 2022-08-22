@@ -32,9 +32,9 @@ public class LoginController {
 		ModelAndView mav = new ModelAndView();
 		
 		if(result.equals("success")) {
-			mav.setViewName("success.jsp");
+			mav.setViewName("successDb.jsp");
 		}else {
-			mav.setViewName("failure.jsp");
+			mav.setViewName("failureDb.jsp");
 		}
 		return mav;
 	}
