@@ -17,4 +17,12 @@ public class MyController {
 		mav.setViewName("display.jsp");	// RD forward 
 		return mav;
 	}
+	
+	@RequestMapping(value = "hi",method = RequestMethod.GET)
+	public ModelAndView sayHi() {
+		ModelAndView mav = new ModelAndView();
+		System.out.println("I Came here");
+		mav.setViewName("display1.jsp");	// RD forward 
+		return mav;
+	}
 }

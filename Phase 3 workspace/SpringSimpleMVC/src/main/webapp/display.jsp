@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Welcome to Spring MVC Application</h2>
+<h2>Welcome to Spring MVC Application with Hello Message</h2>
 </body>
 </html>
