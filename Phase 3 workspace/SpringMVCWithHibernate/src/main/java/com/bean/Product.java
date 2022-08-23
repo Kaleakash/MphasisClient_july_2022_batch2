@@ -34,5 +34,10 @@ public String getUrl() {
 public void setUrl(String url) {
 	this.url = url;
 }
+@Override
+public String toString() {
+	String myUrl = "<img src="+url+" width=150 height=150/>";
+	return "Product [pid=" + pid + ", pname=" + pname + ", price=" + price + ", url=" + myUrl + "]";
+}
 
 }

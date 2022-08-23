@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +39,54 @@ public class ProductController {
 		return mav;
 	}
 	
+	
+	@RequestMapping(value = "updateProduct",method = RequestMethod.POST)
+	public ModelAndView updateProduct(HttpServletRequest req, Product product) {
+		int pid = Integer.parseInt(req.getParameter("pid"));
+		float price = Float.parseFloat(req.getParameter("price"));
+		String ulr = req.getParameter("url");
+		
+		product.setPid(pid);
+		product.setPrice(price);
+		product.setUrl(ulr);
+		
+		String result = productService.updateProduct(product);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("msg", result);
+		mav.setViewName("updateProduct.jsp");
+		return mav;
+	}
+	
+	
+	@RequestMapping(value = "deleteProduct",method = RequestMethod.GET)
+	public ModelAndView deleteProduct(HttpServletRequest req) {
+		int pid = Integer.parseInt(req.getParameter("pid"));
+		
+		String result = productService.deletetProduct(pid);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("msg", result);
+		mav.setViewName("deleteProduct.jsp");
+		return mav;
+	}
+	
+	@RequestMapping(value = "searchProduct",method = RequestMethod.GET)
+	public ModelAndView searchProduct(HttpServletRequest req) {
+		int pid = Integer.parseInt(req.getParameter("pid"));
+		
+		String result = productService.searchProductById(pid);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("msg", result);
+		mav.setViewName("searchProductById.jsp");
+		return mav;
+	}
+	
+	@RequestMapping(value = "findProduct",method = RequestMethod.GET)
+	public ModelAndView findAllProduct() {
+		List<Product> listOfProduct = productService.getAllProduct();
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("listOfProduct", listOfProduct);				// requestScope.setAttribute 
+		mav.setViewName("viewAllProduct.jsp");
+		return mav;
+	}
 	
 }
