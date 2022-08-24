@@ -23,7 +23,7 @@ public class MyController {
 		//ModelAndView mav = new ModelAndView();
 		//mav.addObject("msg", "Akash");
 		
-		mm.addAttribute("msg", "Akash");
+		mm.addAttribute("msg", "Akash");			// request.setAttribute("msg","Akash");
 		System.out.println("I Came Here");
 		
 		return "info";
