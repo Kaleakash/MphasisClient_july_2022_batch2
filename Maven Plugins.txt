@@ -126,6 +126,15 @@ spring MVC with Hibernate configuration
 </bean>
 
 
+View resolver in spring configuration file 
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/view/"></property>
+<property name="suffix" value=".jsp"></property>
+</bean>
+
+
+
 Two dependenices for convert java object to json or xml 
 
 <dependency>
