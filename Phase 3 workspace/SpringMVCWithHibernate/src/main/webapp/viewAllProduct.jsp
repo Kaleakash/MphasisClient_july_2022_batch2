@@ -9,10 +9,12 @@
 </head>
 <body>
 <h2>All Product Details</h2>
+
 <core:forEach items="${requestScope.listOfProduct}" var="product">
 	<img src="${product.url}" width="200" height="200">
 	<span>Name : ${product.pname} Price : ${product.price} </span>
 </core:forEach>
+
 <br/>
 <a href="index.jsp">Back</a>
 </body>
