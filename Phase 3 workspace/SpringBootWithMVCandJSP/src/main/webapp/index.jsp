@@ -8,5 +8,13 @@
 </head>
 <body>
 <h2>Spring Boot with MVC view as JSP</h2>
+<form action="checkUser" method="post">
+<label>EmailId</label>
+<input type="email" name="email"><br/>
+<label>Password</label>
+<input type="password" name="password"><br/>
+<input type="submit" value="submit"/>
+<input type="reset" value="reset"/>
+</form>
 </body>
 </html>
