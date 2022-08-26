@@ -45,4 +45,33 @@ public class EmployeeDao {
 		return 0;
 		}
 	}
+	
+	public int updateEmployeeSalary(Employee emp) {
+		EntityManager manager = emf.createEntityManager();
+		Employee e = manager.find(Employee.class, emp.getId());
+		EntityTransaction tran = manager.getTransaction();
+		if(e==null) {
+			return 0;
+		}else {
+			//e.setSalary(e.getSalary()+emp.getSalary());
+			e.setSalary(emp.getSalary());
+			tran.begin();
+					manager.merge(e);
+			tran.commit();
+			return 1;
+		}
+	}
+	public int deleteEmployeeDetails(int id) {
+		EntityManager manager = emf.createEntityManager();
+		Employee e = manager.find(Employee.class, id);
+		EntityTransaction tran = manager.getTransaction();
+		if(e==null) {
+			return 0;
+		}else {
+			tran.begin();
+					manager.remove(e);
+			tran.commit();
+			return 1;
+		}
+	}
 }

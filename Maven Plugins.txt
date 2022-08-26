@@ -173,7 +173,6 @@ Spring boot web starter
 spring boot jdbc starter 
 
 
-
 <dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-jdbc</artifactId>

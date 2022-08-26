@@ -31,4 +31,27 @@ public class EmployeeService {
 			return "Record didn't store";
 		}
 	}
+	
+	public String deleteEmployee(int id) {
+		if(employeeDao.deleteEmployeeDetails(id)>0) {
+			return "Record deleted successfully";
+		}else {
+			return "Record didn't delete";
+		}
+	}
+	
+	public String updateEmployee(Employee emp) {
+		Employee employeeFromDb = employeeDao.getEmployeeDetails(emp.getId());
+		if(employeeFromDb==null) {
+			return "Employee record not present we can't update";
+		}else if(emp.getSalary()>employeeFromDb.getSalary()) {
+					if(employeeDao.updateEmployeeSalary(emp)>0) {
+						return "Salary updated";
+					}else {
+						return "Salary didn't update";
+					}
+		}else {
+			return "New Salary must be > than old salary";
+		}
+	}
 }
