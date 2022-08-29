@@ -274,7 +274,7 @@ junit 5 dependencies
 <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-api</artifactId>
-    <version>5.7.2</version>
+    <version>5.8.2</version>
     <scope>test</scope>
 </dependency>
 
@@ -282,7 +282,7 @@ junit 5 dependencies
 <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-params</artifactId>
-    <version>5.7.2</version>
+    <version>5.8.2</version>
     <scope>test</scope>
 </dependency>
 
@@ -290,8 +290,17 @@ junit 5 dependencies
 <dependency>
     <groupId>org.junit.vintage</groupId>
     <artifactId>junit-vintage-engine</artifactId>
-    <version>5.7.2</version>
+    <version>5.8.2</version>
     <scope>test</scope>
+</dependency>
+
+
+suite dependency 
+
+<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-suite-engine</artifactId>
+    <version>1.8.1</version>
 </dependency>
 
 
@@ -303,6 +312,7 @@ junit 5 dependencies
     <version>4.0.0</version>
     <scope>test</scope>
 </dependency>
+
 
 
 spring boot testing starter 

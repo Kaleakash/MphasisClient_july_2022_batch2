@@ -8,16 +8,17 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class JUnitHookMethods {
+class AllHookMethods {
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		System.out.println("Before all test");
+		System.out.println("Before All test method");
 	}
+	
 
 	@AfterAll
 	static void tearDownAfterClass() throws Exception {
-		System.out.println("After all test");
+		System.out.println("After All test method");
 	}
 
 	@BeforeEach
@@ -32,11 +33,12 @@ class JUnitHookMethods {
 
 	@Test
 	void test1() {
-		System.out.println("First test method");
+		System.out.println("while testing 1 method");
 	}
 
 	@Test
 	void test2() {
-		System.out.println("Second test method");
+		System.out.println("while testing 2 method");
 	}
 }
+
