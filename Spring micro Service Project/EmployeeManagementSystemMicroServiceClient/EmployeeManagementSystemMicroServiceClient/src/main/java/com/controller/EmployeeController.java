@@ -37,20 +37,26 @@ public class EmployeeController {
 		return employeeService.getAllEmployee();
 	}
 	
+	// http://localhost:8383/employees/storeEmployee
 	@PostMapping(value = "storeEmployee",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String storeEmployee(@RequestBody Employee emp) {
 		return employeeService.storeEmployee(emp);
 	}
 	
+	// http://localhost:8383/employees/updateEmployee
 	@PutMapping(value = "updateEmployee",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String updateEmployee(@RequestBody Employee emp) {
 		return employeeService.updateEmployeeSalary(emp);
 	}
 	
+	// http://localhost:8383/employees/deleteEmployee/1
+	
 	@DeleteMapping(value = "deleteEmployee/{id}")
 	public String deleteEmployee(@PathVariable("id") int id) {
 		return employeeService.deleteEmployee(id);
 	}
+	
+	// http://localhost:8383/employees/findEmployeeById/1
 	
 	@GetMapping(value = "findEmployeeById/{id}")
 	public String findEmployee(@PathVariable("id") int id) {
