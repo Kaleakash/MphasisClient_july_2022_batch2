@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/JavaScript">
+        var con,a,b,sum,sub;
+        do{
+            alert("1:Add 2 : Sub")
+            var choice = eval(prompt("Enter your choice"))
+            switch(choice){
+                case 1:a = eval(prompt("Enter the value of a "))
+                       b = eval(prompt("Enter the value of b"))
+                       sum = a+b;
+                       alert("Sum of two number is "+sum)
+                       break;
+
+                case 2:a = eval(prompt("Enter the value of a "))
+                       b = eval(prompt("Enter the value of b"))
+                       sub = a-b;
+                       alert("Sub of two number is "+sub)
+                       break;
+
+                default : alert("Wrong choice")
+                            break;
+            }
+            con = confirm("Do you want to continue?")
+        
+        }while(con);
+        alert("Thank You!");
+    </script>
+</body>
+</html>
