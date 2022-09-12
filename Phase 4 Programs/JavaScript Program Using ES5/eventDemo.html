@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function info() {
+            alert("Event fired...")
+        }
+        function readData() {
+            //1st way using name attribute 
+            // var fname = document.getElementsByName("uname")[0].value;
+            // var lname = document.getElementsByName("uname")[1].value;
+            // var fullname = fname +" "+lname;
+            // alert("your full name is "+fullname)
+            
+            //2nd way using id attribute 
+            var fname = document.getElementById("n1").value;
+            var lname = document.getElementById("n2").value
+            var fullname = fname+" "+lname;
+           // alert("your full name is "+fullname)
+           document.getElementById("n3").value = fullname;
+           document.getElementById("n4").innerHTML=fullname;        // non editable tag
+           document.getElementById("n1").value=""
+           document.getElementById("n2").value=""
+        }
+        function readTagValue(){
+            // read using id 
+            //var h1TagValue = document.getElementById("xyz").innerHTML;  // non editable tag 
+            //alert(h1TagValue);
+            // read using tagname 
+            var h1TagValue = document.getElementsByTagName("h1")[0].innerHTML;
+            alert(h1TagValue)
+        }
+    </script>
+</head>
+<body>
+    <h1 name="abc" id="xyz" class="mno">Welcome to JavaScript Training</h1>
+    <input type="button" value="Click Here" onclick="info()"/>
+    <br/>
+    fName : <input type="text" name="uname" id="n1"/><br/>
+    lname :<input type="text" name="uname" id="n2"/><br/>
+    Full Name <input type="text" name="fullname" id="n3" readonly/><br/>
+    <div id="n4">
+
+    </div>
+    <input type="button" value="Read Value" onclick="readData()"/>
+    <input type="button" value="tag value read" onclick="readTagValue()"/>
+</body>
+</html>
