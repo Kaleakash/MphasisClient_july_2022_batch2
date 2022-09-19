@@ -1,0 +1,18 @@
+<div>
+    <h2>One way data binding using Property binding</h2>
+    <input type="text"/><br/>
+    <input type="text" value="Raj"/><br/>
+    <input type="text" value="lname"/><br/>
+    <input type="text" [value]="lname"/><br/>
+    <p innerText="lname"></p>
+    <p [innerText]="lname"></p>
+    <div [innerText]="lname"></div>
+    {{lname}} <span [innerText]="lname"></span><br/>
+    <input type="button" value="Click here"/><br/>
+    <input type="button" value="Click here" disabled/><br/>
+    <input type="button" value="Click here" disabled="lname"/><br/>
+    <input type="button" value="string interpolation" disabled={{f1}}/><br/>
+    <input type="button" value="Property binding" [disabled]="f1"/>
+</div>
+
+
