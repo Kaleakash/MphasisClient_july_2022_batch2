@@ -1,1 +1,14 @@
-<p>attribute-directive works!</p>
+<div>
+    <h2>Attribute directive ie ngStyle and ngClass</h2>
+    <p style="color:red">Apply css effect using style attribute</p>
+    <p [ngStyle]="{'color':'red'}">Apply css effect using ngStyle attribute</p>
+    <p [ngStyle]="styleVariable">Apply css effect using ngStyle attribute</p>
+    <p class="firstClass">class using css</p>
+    <p [ngClass]="{firstClass:true}">class using ngClass style</p>
+    <p [ngClass]="{firstClass:false}">class using ngClass style</p>
+    <p [ngClass]="{firstClass:false,secondClass:true}">class using ngClass style</p>
+    <p [ngClass]="{firstClass:f1,secondClass:f2}">class using ngClass style</p>
+    <div [ngClass]="{firstClass:f1,secondClass:f2}" (mousemove)="ff1()" (mouseout)="ff2()">
+            Hi....
+    </div>
+</div>
