@@ -1,0 +1,40 @@
+<div>
+    <h2>Structure Directive</h2>
+    <h4>*ngIf</h4>
+    <div>This is div tag</div>
+    <div *ngIf="true">This is div tag with true value</div>
+    <div *ngIf="false">This is div tag with false value</div>
+    <div *ngIf="f1">This is div tag with f1 boolean vallue</div>
+    <div *ngIf="f2">This is div tag with f2 boolean vallue</div>
+    <input type="button" value="Display content" (click)="changeValue()"/><br/>
+    <div *ngIf="f3">
+        <h2>Welcome to Angular training</h2>
+        <p>Today we are learning types of directives</p>
+    </div>
+    <input type="button" [value]="b1" (click)="toggle()"/>
+    <div *ngIf="f4">
+                Hello......
+    </div>
+    <hr/>
+    <h4>*ngFor</h4>
+    <div>{{num1}}</div>
+    <h4>Display the number one by one</h4>
+    <div *ngFor="let n of num1">{{n}}</div>
+    <h4>All names are</h4>
+    <ul>
+        <li *ngFor="let name of names">{{name}}</li>
+    </ul>
+    <!-- <p *ngFor(let name of names)>{{name}</p> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
