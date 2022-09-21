@@ -1,0 +1,10 @@
+<div>
+    <h2>Welcome to Home page user {{userName}}</h2>
+    <a routerLink="sub1">Sub1 Task</a>
+    <a routerLink="sub2">Sub2 Task</a>
+    <a routerLink="sub3">Sub3 Task</a>
+    <hr/>
+    <router-outlet></router-outlet>
+
+    <input type="button" value="logout" (click)="logout()"/>
+</div>

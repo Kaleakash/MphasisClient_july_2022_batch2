@@ -3,9 +3,11 @@
     <h2>Login Page using Template Driven Form</h2>
     <form #loginRef = "ngForm" (ngSubmit)="checkUser(loginRef)">
         <label>EmailId</label>
-            <input type="email" name="email" ngModel required/>
+            <input type="email" name="email" ngModel required minlength="7" pattern="[a-z,0-9]+@[a-z,0-9]+.com"/>
             <div *ngIf="loginRef.controls['email']?.invalid && loginRef.controls['email']?.touched">
-                <span style="color:red">UserName is requried</span>
+        <span [hidden]="!loginRef.controls['email'].hasError('required')" style="color:red">Email is required</span>
+        <span [hidden]="!loginRef.controls['email'].hasError('minlength')" style="color:red">Email Id must be 7 character</span>
+        <span [hidden]="!loginRef.controls['email'].hasError('pattern')" style="color:red">It must follow pattern</span>
             </div>
             <br/>
         <label>Password</label>
