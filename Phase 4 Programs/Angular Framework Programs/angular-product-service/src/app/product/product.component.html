@@ -1,0 +1,22 @@
+<div>
+    <form [formGroup]="productRef" (ngSubmit)="storeProduct()">
+    <input type="number" placeholder="Enter Product Id" formControlName="id"/>
+    <input type="text" placeholder="Enter Product Name" formControlName="pname"/>
+    <input type="number" placeholder="Enter Product Price" formControlName="price"/>
+    <input type="submit" value="Add Product" class="btn btn-success"/>
+    </form>
+    <table border="1" class="table">
+        <tr>
+            <th>PId</th>
+            <th>PName</th>
+            <th>Price</th>
+            <th>View Details</th>
+        </tr>
+        <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.pname}}</td>
+                <td>{{product.price}}</td>
+                <td><input type="button" value="View Details" (click)="viewDetails(product)" class="btn btn-primary"></td>
+        </tr>
+    </table>
+</div>

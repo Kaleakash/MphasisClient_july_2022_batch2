@@ -1,6 +1,19 @@
 {
-	"products":[
-		{"id":101,"pname":"Tv","price":55000},
-		{"id":102,"pname":"Computer","price":34000}
-	]
+  "products": [
+    {
+      "id": 102,
+      "pname": "Computer",
+      "price": 34000
+    },
+    {
+      "id": 103,
+      "pname": "Mobile",
+      "price": 25000
+    },
+    {
+      "id": 104,
+      "pname": "Pen Drive",
+      "price": 1200
+    }
+  ]
 }

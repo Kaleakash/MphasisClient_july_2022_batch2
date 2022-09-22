@@ -1,0 +1,9 @@
+<div>
+    <h2>Product Details</h2>
+    <p>PId {{product.id}}</p>
+    <p>PName {{product.pname}}</p>
+    <p>Price {{product.price}}</p>
+
+    <input type="button" value="View All Product" (click)="ViewAll()"/>
+    <input type="button" value="Delete Product" (click)="deleteProduct(product.id)"/>
+</div>
