@@ -1,18 +1,18 @@
 package com.service;
 
 import com.bean.Account;
+import com.dao.AccountDao;
 
 public class AccountService {
-	
+	AccountDao ad = new AccountDao();
 	public String createAccount(Account account) {
-		/*
-		 * We will DAO method and that method call db to create the account
-		 * 
-		 */
+		
 		if(account.getAmount()<500) {
 			return "Min amount must be 500";
-		}else {
+		}else if(ad.createAccount(account)>0){
 			return "Account created";
+		}else {
+			return "Account didn't create";
 		}
 	}
 	
