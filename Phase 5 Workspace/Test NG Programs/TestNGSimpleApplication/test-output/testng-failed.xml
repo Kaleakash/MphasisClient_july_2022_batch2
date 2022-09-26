@@ -5,7 +5,7 @@
     <classes>
       <class name="com.service.AccountServiceTest">
         <methods>
-          <include name="createAccountTest"/>
+          <include name="withdrawnTest"/>
         </methods>
       </class> <!-- com.service.AccountServiceTest -->
     </classes>

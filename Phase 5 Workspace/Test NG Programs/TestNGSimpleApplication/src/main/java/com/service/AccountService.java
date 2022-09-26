@@ -17,28 +17,39 @@ public class AccountService {
 	}
 	
 	public String findBalance(int accno) {
-		/*
-		 * 
-		 * 
-		 * 
-		 */
-		//return "Your account balance is 5000";
-		return "Account number doesn't exist";
+		float balanceAmount = ad.findBalance(accno);
+		if(balanceAmount>=0) {
+			return "Your account balance is "+balanceAmount;
+		}if(balanceAmount==-1) {
+			return "Account number doesn't exist";
+		}else {
+			return "Exception generated";
+		}
 	}
 	public String withdrawn(Account account) {
-		/*
-		 * 
-		 * 
-		 */
-		//return "Withdraw successfully";
-		return "You can't withdraw";
+		float balanceAmount = ad.findBalance(account.getAccno());
+		
+		if(balanceAmount ==-1) {
+			return "Invalid account number";
+		}
+		else if(balanceAmount - account.getAmount() > 500 ) {
+			
+				if(ad.withdrawn(account)>0) {
+					return "Withdrawn done successfully";
+				}else {
+					return "Didn't withdraw";
+				}
+		}else {
+			return "Your can't withdraw you have to maintain min 500";
+		}
 	}
 	public String deposit(Account account) {
-		/*
-		 * 
-		 * 
-		 */
-		//return "Deposited successfully";
-		return "You can't deposit";
+		if(account.getAmount()>50000) {
+			return "You can't deposite 50000 at time";
+		}else if(ad.deposit(account)>0) {
+			return "Deposit done successfully";
+		}else {
+			return "Didn't desosit";
+		}
 	}
 }
