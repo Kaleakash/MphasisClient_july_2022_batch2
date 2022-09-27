@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+  
+  <test name="MyTest">
+    <classes>
+      <class name="com.service.HookTestingMethods">
+      	<methods>
+      		<exclude name="f1"></exclude>
+      	</methods>
+      </class>
+      <class name="com.service.SampleTest">
+      	<methods>
+      		<include name="f1"></include>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="VehicleTesting">
+    <classes>
+      <class name="com.service.CarTest"/>
+      <class name="com.service.BikeTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="AccountTest">
+    <classes>
+      <class name="com.service.AccountServiceTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="OperationTest">
+    <classes>
+      <class name="com.service.OperationTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

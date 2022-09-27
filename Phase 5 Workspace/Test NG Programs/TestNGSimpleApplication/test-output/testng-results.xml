@@ -1,33 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="3" total="18" passed="13" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-26T12:55:46 IST" name="Default suite" finished-at="2022-09-26T12:55:46 IST" duration-ms="56">
+  <suite started-at="2022-09-27T10:36:54 IST" name="Suite" finished-at="2022-09-27T10:36:55 IST" duration-ms="595">
     <groups>
+      <group name="speed">
+        <method signature="BikeTest.speed()[pri:0, instance:com.service.BikeTest@36d585c]" name="speed" class="com.service.BikeTest"/>
+        <method signature="CarTest.mailge()[pri:0, instance:com.service.CarTest@69fb6037]" name="mailge" class="com.service.CarTest"/>
+        <method signature="CarTest.speed()[pri:0, instance:com.service.CarTest@69fb6037]" name="speed" class="com.service.CarTest"/>
+      </group> <!-- speed -->
+      <group name="mailage">
+        <method signature="BikeTest.mailge()[pri:0, instance:com.service.BikeTest@36d585c]" name="mailge" class="com.service.BikeTest"/>
+        <method signature="CarTest.mailge()[pri:0, instance:com.service.CarTest@69fb6037]" name="mailge" class="com.service.CarTest"/>
+      </group> <!-- mailage -->
     </groups>
-    <test started-at="2022-09-26T12:55:46 IST" name="Default test" finished-at="2022-09-26T12:55:46 IST" duration-ms="56">
-      <class name="com.service.OrderTestExecution">
-        <test-method signature="d()[pri:1, instance:com.service.OrderTestExecution@192c3f1e]" started-at="2022-09-26T12:55:46 IST" name="d" finished-at="2022-09-26T12:55:46 IST" duration-ms="7" status="PASS">
+    <test started-at="2022-09-27T10:36:54 IST" name="MyTest" finished-at="2022-09-27T10:36:54 IST" duration-ms="36">
+      <class name="com.service.SampleTest">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.service.SampleTest@a1cdc6d]" started-at="2022-09-27T10:36:54 IST" name="beforeMethod" finished-at="2022-09-27T10:36:54 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- d -->
-        <test-method signature="e()[pri:1, instance:com.service.OrderTestExecution@192c3f1e]" started-at="2022-09-26T12:55:46 IST" name="e" finished-at="2022-09-26T12:55:46 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.service.SampleTest@a1cdc6d]" started-at="2022-09-27T10:36:54 IST" name="beforeClass" finished-at="2022-09-27T10:36:54 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- e -->
-        <test-method signature="a()[pri:2, instance:com.service.OrderTestExecution@192c3f1e]" started-at="2022-09-26T12:55:46 IST" name="a" finished-at="2022-09-26T12:55:46 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method signature="f1()[pri:0, instance:com.service.SampleTest@a1cdc6d]" started-at="2022-09-27T10:36:54 IST" name="f1" finished-at="2022-09-27T10:36:54 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- a -->
-        <test-method signature="b()[pri:3, instance:com.service.OrderTestExecution@192c3f1e]" started-at="2022-09-26T12:55:46 IST" name="b" finished-at="2022-09-26T12:55:46 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- f1 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.service.SampleTest@a1cdc6d]" started-at="2022-09-27T10:36:54 IST" name="afterClass" finished-at="2022-09-27T10:36:54 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- b -->
-        <test-method signature="c()[pri:4, instance:com.service.OrderTestExecution@192c3f1e]" started-at="2022-09-26T12:55:46 IST" name="c" finished-at="2022-09-26T12:55:46 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.service.SampleTest@a1cdc6d]" started-at="2022-09-27T10:36:54 IST" name="afterMethod" finished-at="2022-09-27T10:36:54 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- c -->
-      </class> <!-- com.service.OrderTestExecution -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.service.SampleTest -->
+      <class name="com.service.HookTestingMethods">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:54 IST" name="beforeTest" finished-at="2022-09-27T10:36:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:54 IST" name="beforeClass" finished-at="2022-09-27T10:36:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:54 IST" name="beforeMethod" finished-at="2022-09-27T10:36:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="f2()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:54 IST" name="f2" finished-at="2022-09-27T10:36:54 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:54 IST" name="afterMethod" finished-at="2022-09-27T10:36:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:54 IST" name="afterClass" finished-at="2022-09-27T10:36:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:54 IST" name="afterTest" finished-at="2022-09-27T10:36:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.service.HookTestingMethods -->
+    </test> <!-- MyTest -->
+    <test started-at="2022-09-27T10:36:54 IST" name="VehicleTesting" finished-at="2022-09-27T10:36:54 IST" duration-ms="20">
+      <class name="com.service.CarTest">
+        <test-method signature="color()[pri:0, instance:com.service.CarTest@69fb6037]" started-at="2022-09-27T10:36:54 IST" name="color" finished-at="2022-09-27T10:36:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- color -->
+        <test-method signature="mailge()[pri:0, instance:com.service.CarTest@69fb6037]" started-at="2022-09-27T10:36:54 IST" name="mailge" finished-at="2022-09-27T10:36:54 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mailge -->
+        <test-method signature="speed()[pri:0, instance:com.service.CarTest@69fb6037]" started-at="2022-09-27T10:36:54 IST" name="speed" finished-at="2022-09-27T10:36:54 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- speed -->
+      </class> <!-- com.service.CarTest -->
+      <class name="com.service.BikeTest">
+        <test-method signature="color()[pri:0, instance:com.service.BikeTest@36d585c]" started-at="2022-09-27T10:36:54 IST" name="color" finished-at="2022-09-27T10:36:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- color -->
+        <test-method signature="mailge()[pri:0, instance:com.service.BikeTest@36d585c]" started-at="2022-09-27T10:36:54 IST" name="mailge" finished-at="2022-09-27T10:36:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mailge -->
+        <test-method signature="speed()[pri:0, instance:com.service.BikeTest@36d585c]" started-at="2022-09-27T10:36:54 IST" name="speed" finished-at="2022-09-27T10:36:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- speed -->
+      </class> <!-- com.service.BikeTest -->
+    </test> <!-- VehicleTesting -->
+    <test started-at="2022-09-27T10:36:54 IST" name="AccountTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="441">
+      <class name="com.service.AccountServiceTest">
+        <test-method signature="createAccountTest()[pri:0, instance:com.service.AccountServiceTest@53aad5d5]" started-at="2022-09-27T10:36:54 IST" name="createAccountTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="347" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Account created] but found [Account didn't create]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Account created] but found [Account didn't create]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.service.AccountServiceTest.createAccountTest(AccountServiceTest.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccountTest -->
+        <test-method signature="depositTest()[pri:0, instance:com.service.AccountServiceTest@53aad5d5]" started-at="2022-09-27T10:36:55 IST" name="depositTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- depositTest -->
+        <test-method signature="findBalanceTest()[pri:0, instance:com.service.AccountServiceTest@53aad5d5]" started-at="2022-09-27T10:36:55 IST" name="findBalanceTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="48" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Your account balance is 700.0] but found [Your account balance is 30501.0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Your account balance is 700.0] but found [Your account balance is 30501.0]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.service.AccountServiceTest.findBalanceTest(AccountServiceTest.java:55)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findBalanceTest -->
+        <test-method signature="withdrawnTest()[pri:0, instance:com.service.AccountServiceTest@53aad5d5]" started-at="2022-09-27T10:36:55 IST" name="withdrawnTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- withdrawnTest -->
+      </class> <!-- com.service.AccountServiceTest -->
+    </test> <!-- AccountTest -->
+    <test started-at="2022-09-27T10:36:55 IST" name="OperationTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="32">
+      <class name="com.service.OperationTest">
+        <test-method signature="divTest()[pri:0, instance:com.service.OperationTest@2cdd0d4b]" started-at="2022-09-27T10:36:55 IST" name="divTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- divTest -->
+        <test-method signature="mulTest()[pri:0, instance:com.service.OperationTest@2cdd0d4b]" started-at="2022-09-27T10:36:55 IST" name="mulTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mulTest -->
+        <test-method signature="subTest()[pri:0, instance:com.service.OperationTest@2cdd0d4b]" started-at="2022-09-27T10:36:55 IST" name="subTest" finished-at="2022-09-27T10:36:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subTest -->
+      </class> <!-- com.service.OperationTest -->
+      <class name="com.service.HookTestingMethods">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:54 IST" name="beforeSuite" finished-at="2022-09-27T10:36:54 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.service.HookTestingMethods@548e6d58]" started-at="2022-09-27T10:36:55 IST" name="afterSuite" finished-at="2022-09-27T10:36:55 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.service.HookTestingMethods -->
+    </test> <!-- OperationTest -->
+  </suite> <!-- Suite -->
 </testng-results>

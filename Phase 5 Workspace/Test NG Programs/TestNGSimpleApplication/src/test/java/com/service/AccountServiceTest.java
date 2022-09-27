@@ -10,7 +10,6 @@ import com.bean.Account;
 public class AccountServiceTest {
 
   @Test
-  @Ignore
   public void createAccountTest() {
     AccountService ac = new AccountService();
     Account acc1 = new Account(100,"Ravi",400);
@@ -27,7 +26,7 @@ public class AccountServiceTest {
   }
 
   @Test
-  //@Ignore
+
   public void depositTest() {
 	  AccountService ac = new AccountService();
 	  Account acc1 = new Account();
@@ -46,7 +45,7 @@ public class AccountServiceTest {
   }
 
   @Test
-  @Ignore
+
   public void findBalanceTest() {
 //    throw new RuntimeException("Test not implemented");
 	  AccountService ac = new AccountService();
@@ -61,7 +60,7 @@ public class AccountServiceTest {
   }
 
   @Test
-  @Ignore
+
   public void withdrawnTest() {
     //throw new RuntimeException("Test not implemented");
 	  AccountService ac = new AccountService();

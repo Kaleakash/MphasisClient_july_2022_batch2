@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="MySuite">
+<groups>
+	<run>
+		<include name="speed"></include>  
+		<!--  <include name="mailage"></include> -->
+	</run>
+</groups>
+  <test name="VehicleTesting">
+    <classes>
+      <class name="com.service.CarTest"/>
+      <class name="com.service.BikeTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
