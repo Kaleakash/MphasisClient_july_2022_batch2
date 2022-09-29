@@ -12,7 +12,8 @@ public class LoginTest {
 		System.setProperty("webdriver.chrome.driver", "D:\\Desktop\\Mphasis Client Session\\July 2022 Batch\\Repository\\Phase 5 Workspace\\chromedriver_win32\\chromedriver.exe");
 		WebDriver wd = new ChromeDriver();
 		
-		wd.get("http://127.0.0.1:5500/login.html");
+		wd.get("http://localhost:8080/Mywebapp");
+		//wd.get("http://127.0.0.1:5500/login.html");
 //		String sourceCurrentPagePath = wd.getCurrentUrl();
 //		System.out.println(sourceCurrentPagePath);
 //		WebElement emailIdRef = wd.findElement(By.id("n1"));
@@ -25,7 +26,7 @@ public class LoginTest {
 //		submitButtonRef.click();
 //		String targetCurrentPagePath = wd.getCurrentUrl();
 //		System.out.println(targetCurrentPagePath);
-//		WebElement h2TagRef = wd.findElement(By.tagName("h2"));
+//					WebElement h2TagRef = wd.findElement(By.tagName("h2"));
 //		System.out.println(h2TagRef.getText());
 //		// Reset button 
 //		//WebElement resetButtonRef = wd.findElement(By.id("b2"));
