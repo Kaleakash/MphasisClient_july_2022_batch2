@@ -1,0 +1,112 @@
+update ec2 instance 
+
+sudo yum -y update	: This command is use to update es2 instance 
+
+--------------->Git install 
+
+sudo yum install git -y
+
+install java 
+------------------------------------------
+Java 8 
+
+sudo yum install java-1.8.0-openjdk
+	java -version 
+sudo yum remove java-1.8.0-openjdk -y
+
+java 11 
+
+sudo amazon-linux-extras install java-openjdk11		: this command is use to install java11
+
+sudo alternatives --config java		: This command is switch from one version to another version 
+
+-----------------------Connection ES2 to S3------------------------------
+
+if we want to download any files or program or jar file from s3 then we have to use command as 
+
+wget URL 
+
+---------------------------------------------
+install Maven 
+
+---------------------------------
+
+install maven 
+
+This command is use to download the software using open repository 
+
+sudo wget https://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+
+Then you have to extract particular folder 
+
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+
+Then you have to install it 
+
+sudo yum install -y apache-maven
+
+
+------------------->Jenkin 
+
+Now, to download the latest Jenkins package
+
+	sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
+
+**iv. **To enable the installation of the package, import the key file from Jenkins-CI:
+
+	sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+Install Jenkins on the EC2 instance
+
+	sudo yum install jenkins -y
+
+To start the Jenkins service
+
+sudo service jenkins start
+
+To check the status 
+
+sudo systemctl status jenkins
+
+This one is use to get the default password 
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+
+-----------------------> Node JS 
+
+node --version 
+
+
+install node 
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+or 
+
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+. ~/.nvm/nvm.sh
+
+nvm install node		(node version manager)
+or 
+nvm install --lts
+
+--------------Docker install 
+
+install docker 
+
+sudo yum install docker
+
+sudo service docker start
+
+sudo docker info
+
+
+
+
+
+
+
+
+
