@@ -1,0 +1,18 @@
+version: "3"
+services:
+  product-backend:
+    image: product-backend-app
+    ports:
+      - "9090:9090"
+    networks:
+      - product-management-system
+  product-frontend:
+    image: product-frontend-app
+    ports:
+      - "80:80"
+    depends_on:
+      - product-backend
+    networks:
+      - product-management-system
+networks:
+  product-management-system:  

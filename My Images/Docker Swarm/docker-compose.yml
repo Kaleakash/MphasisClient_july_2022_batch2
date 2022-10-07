@@ -1,0 +1,18 @@
+version: "3"
+services:
+  product-backend:
+    image: aksahkale/product-backend-app:1.0
+    ports:
+      - "9090:9090"
+    networks:
+      - product-management-system
+  product-frontend:
+    image: akashkale/product-frontend-app:1.0
+    ports:
+      - "80:80"
+    depends_on:
+      - product-backend
+    networks:
+      - product-management-system
+networks:
+  product-management-system:  
