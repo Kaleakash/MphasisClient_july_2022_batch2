@@ -11,6 +11,6 @@ export class ProductService {
   constructor(public http:HttpClient) { }
 
   loadAllProduct():Observable<Product[]> {
-    return this.http.get<Product[]>("http://localhost:9090/product/allProduct");
+    return this.http.get<Product[]>("http://52.91.115.119:9090/product/allProduct");
   }
 }

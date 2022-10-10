@@ -7,7 +7,7 @@ services:
     networks:
       - product-management-system
   product-frontend:
-    image: akashkale/product-frontend-app:1.0
+    image: akashkale/product-frontend-app:2.0
     ports:
       - "80:80"
     depends_on:
