@@ -17,10 +17,13 @@ public class LoginService {
 		if(result.isPresent()) {
 					Login ll = result.get();
 					if(ll.getPassword().equals(login.getPassword())) {		
-						if(ll.getTypeOfUser().equals("admin")) {
+						
+						if(login.getTypeOfUser().equals(ll.getTypeOfUser())) {
 							return "Admin sucessfully login";
-						}else {
+						}else if(login.getTypeOfUser().equals(ll.getTypeOfUser())){
 							return "User successfully login";
+						}else {
+							return "Invalid details";
 						}					
 					}else {
 						return "InValid password";

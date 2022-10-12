@@ -1,5 +1,6 @@
 package com.onlineshop.bean;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -8,6 +9,7 @@ public class Login {
 @Id
 private String emailid;
 private String password;
+@Column(name = "typeofuser")
 private String typeOfUser;
 public String getEmailid() {
 	return emailid;
