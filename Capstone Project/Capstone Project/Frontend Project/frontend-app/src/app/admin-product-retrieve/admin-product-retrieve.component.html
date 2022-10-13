@@ -1,0 +1,22 @@
+<div>
+    <h2>Add Product Details</h2>
+    <div *ngIf="flag">
+            <h2>Update Product</h2>
+            <form (ngSubmit)="updateDataFromDb()">
+                <label>PId</label>
+                <input type="number" name="pid" [(ngModel)]="pid" readonly/><br/>
+                <label>Price</label>
+                <input type="number" name="price" [(ngModel)]="price"/><br/>
+                <label>URL</label>
+                <input type="URL" name="url" [(ngModel)]="url"/><br/>
+                <input type="submit" value="update data"/>
+                <input type="reset" value="reset"/>
+            </form>
+    </div>
+    <span *ngFor="let p of products">
+        <img src={{p.url}} width="300px" height="300px"/>
+        <span>{{p.pname}} {{p.price}}</span>
+        <input type="button" value="delete" (click)="deleteProduct(p.pid)"/>
+        <input type="button" value="update" (click)="updateProduct(p)"/>
+    </span>
+</div>

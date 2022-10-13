@@ -1,0 +1,31 @@
+version: "3.0"
+services:
+  web-app:
+    image: my-angular
+    ports:
+      - "80:80"
+    networks:
+      - employee-mysql
+    depends_on:
+      - employee-jdbc
+  employee-jdbc:
+    image: my-spring
+    #build: .
+    ports:
+      - "8080:8080"
+    networks:
+      - employee-mysql
+    depends_on:
+      - mysqldb
+  mysqldb:
+    image: mysql:8
+    networks:
+      - employee-mysql
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=bootdb  
+
+networks:
+  employee-mysql:

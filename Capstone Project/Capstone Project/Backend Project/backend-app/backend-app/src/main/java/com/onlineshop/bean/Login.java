@@ -29,5 +29,9 @@ public String getTypeOfUser() {
 public void setTypeOfUser(String typeOfUser) {
 	this.typeOfUser = typeOfUser;
 }
+@Override
+public String toString() {
+	return "Login [emailid=" + emailid + ", password=" + password + ", typeOfUser=" + typeOfUser + "]";
+}
 
 }

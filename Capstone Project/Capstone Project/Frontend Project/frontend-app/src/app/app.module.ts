@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { AdminProductRetrieveComponent } from './admin-product-retrieve/admin-product-retrieve.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
     LoginComponent,
     SignupComponent,
     UserdashboardComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    AddProductComponent,
+    AdminProductRetrieveComponent
   ],
   imports: [
     BrowserModule,

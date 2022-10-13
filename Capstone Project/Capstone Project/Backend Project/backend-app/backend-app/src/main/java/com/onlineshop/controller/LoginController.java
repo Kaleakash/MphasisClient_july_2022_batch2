@@ -1,4 +1,4 @@
-package com.onlineshop;
+package com.onlineshop.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -23,12 +23,14 @@ public class LoginController {
 	
 	@PostMapping(value = "signIn",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String signIn(@RequestBody Login login) {
+		System.out.println("I cam here");
 		return loginService.signIn(login);
 		
 	}
 	
 	@PostMapping(value = "signUp",consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String signUp(@RequestBody Login login) {
+		System.out.println(login);
 		return loginService.signUp(login);
 	}
 }

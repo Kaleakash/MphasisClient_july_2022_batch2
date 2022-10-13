@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
     console.log(login);
     this.ls.signIn(login).subscribe({
       next:(result:any)=>{
+        console.log(result);
         if(result=="Admin sucessfully login"){
             sessionStorage.setItem("userDetails",login.emailid);
             this.router.navigate(["adminHome"])
